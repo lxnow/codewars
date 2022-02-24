@@ -47,6 +47,7 @@ function validBraces(string) {
   let openGroup = [];
   let openVal = '';
   let result = false;
+
   for (let counter = 0; counter < string.length; counter++){
     switch (string[counter]) {
       case '(':
@@ -83,6 +84,7 @@ function validBraces(string) {
     }
 
     if (countParen < 0 || countBrace < 0 || countCurly < 0) break;
+
   }
 
   if (countParen !== 0 || countBrace !== 0 || countCurly !== 0) result = false;
